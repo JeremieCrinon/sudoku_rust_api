@@ -1,9 +1,7 @@
-use axum::{Router, routing::{get, post}};
-use crate::handlers::api::{hello_world, test_route, post_message};
+use axum::{Router, routing::post};
+use crate::handlers::api::solve_sudoku;
 
 pub fn api_routes() -> Router {
     return Router::new()
-        .route("/hello-world", get(hello_world))
-        .route("/test", get(test_route))
-        .route("/message", post(post_message));
+        .route("/sudoku", post(solve_sudoku));
 }

@@ -4,6 +4,7 @@ use log::info;
 
 mod handlers;
 mod routes;
+mod sudoku;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
